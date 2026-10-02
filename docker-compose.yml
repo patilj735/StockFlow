@@ -1,0 +1,37 @@
+services:
+  backend:
+    build:
+      context: ./server/StoreDesk.API
+
+    container_name: storedesk-backend
+
+    restart: always
+
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+
+      ConnectionStrings__DefaultConnection: ${DATABASE_URL}
+
+      Jwt__Key: ${JWT_KEY}
+      Jwt__Issuer: ${JWT_ISSUER}
+      Jwt__Audience: ${JWT_AUDIENCE}
+
+      AdminUser__Email: ${ADMIN_EMAIL}
+      AdminUser__Password: ${ADMIN_PASSWORD}
+
+    ports:
+      - "5196:8080"
+
+  frontend:
+    build:
+      context: ./client
+
+    container_name: storedesk-frontend
+
+    restart: always
+
+    depends_on:
+      - backend
+
+    ports:
+      - "5173:5173"

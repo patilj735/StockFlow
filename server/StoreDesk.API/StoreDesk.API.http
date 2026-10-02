@@ -1,0 +1,125 @@
+@StoreDesk.API_HostAddress = http://localhost:5196
+
+GET {{StoreDesk.API_HostAddress}}/api/categories
+Accept: application/json
+
+###
+POST {{StoreDesk.API_HostAddress}}/api/categories
+Content-Type: application/json
+
+# {
+#   "name": "Electronics",
+#   "description": "Electronic products"
+# }
+{
+  "name": "Books",
+  "description": "All kinds of books"
+}
+
+###
+GET {{StoreDesk.API_HostAddress}}/api/categories/1
+Accept: application/json
+
+###
+PUT {{StoreDesk.API_HostAddress}}/api/categories/2
+Content-Type: application/json
+
+{
+  "id": 2,
+  "name": "Updated Electronics",
+  "description": "Updated description for electronic products"
+}
+
+###
+DELETE {{StoreDesk.API_HostAddress}}/api/categories/3
+Content-Type: application/json
+
+###
+POST {{StoreDesk.API_HostAddress}}/api/categories
+Content-Type: application/json
+
+{
+  "description": "test"
+}
+
+###
+POST {{StoreDesk.API_HostAddress}}/api/categories
+Content-Type: application/json
+
+{
+  "name": ""
+}
+
+###
+POST {{StoreDesk.API_HostAddress}}/api/items
+Content-Type: application/json
+
+# {
+#   "name": "Laptop",
+#   "description": "Gaming laptop",
+#   "price": 1200,
+#   "quantity": 10,
+#   "categoryId": 3
+# }
+# {
+#   "name": "The Great Gatsby",
+#   "description": "A fascinating book",
+#   "price": 20,
+#   "quantity": 50,
+#   "categoryId": 4
+# }
+{
+  "name": "",
+  "description": "Latest model smartphone",
+  "price": 800,
+  "quantity": 25,
+  "categoryId": 3
+}
+
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiI4MDcxN2YxOS1kYWIzLTQ3YjktYjllYS1jNmU3ZGM3MTllM2UiLCJlbWFpbCI6Im1hcnVmc2Fya2VyLndvcmtAZ21haWwuY29tIiwibmFtZSI6Ik1hcnVmIiwiZXhwIjoxNzc4MzYwNzU4LCJpc3MiOiJTdG9yZURlc2tBUEkiLCJhdWQiOiJTdG9yZURlc2tDbGllbnQifQ.djJkQIxVL2ULGpmcGqvuAaGhJtOD3ghLltYknYlsSPk
+
+###
+GET {{StoreDesk.API_HostAddress}}/api/items
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+GET {{StoreDesk.API_HostAddress}}/api/items?page=1&pageSize=5
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+GET {{StoreDesk.API_HostAddress}}/api/items?page=2&pageSize=5
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+GET {{StoreDesk.API_HostAddress}}/api/items?sortBy=price&sortOrder=desc
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+GET {{StoreDesk.API_HostAddress}}/api/items?sortBy=quantity
+Accept: application/json
+Authorization: Bearer {{token}}
+
+###
+POST {{StoreDesk.API_HostAddress}}/api/auth/register
+Content-Type: application/json
+Accept: application/json
+
+{
+  "fullName": "Maruf Sarker",
+  "email": "marufsarker.work@gmail.com",
+  "password": "Mmsmaruf123!"
+}
+
+###
+POST {{StoreDesk.API_HostAddress}}/api/auth/login
+Content-Type: application/json
+Accept: application/json
+
+{
+  "email": "marufsarker.work@gmail.com",
+  "password": "Mmsmaruf123!"
+}

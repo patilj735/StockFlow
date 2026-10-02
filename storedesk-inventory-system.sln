@@ -1,0 +1,29 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.2.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "server", "server", "{DAD03CFC-D5FA-AC94-41C7-9ABAB326F09E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StoreDesk.API", "server\StoreDesk.API\StoreDesk.API.csproj", "{079E5859-1951-BC9C-37FB-DC1F577A6F85}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{079E5859-1951-BC9C-37FB-DC1F577A6F85}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{079E5859-1951-BC9C-37FB-DC1F577A6F85}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{079E5859-1951-BC9C-37FB-DC1F577A6F85}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{079E5859-1951-BC9C-37FB-DC1F577A6F85}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{079E5859-1951-BC9C-37FB-DC1F577A6F85} = {DAD03CFC-D5FA-AC94-41C7-9ABAB326F09E}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {72958D20-E642-4FB6-92AD-B01F0775AB03}
+	EndGlobalSection
+EndGlobal

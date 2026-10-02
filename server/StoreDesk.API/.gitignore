@@ -1,0 +1,68 @@
+# Build folders
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Rider
+.idea/
+
+# VS Code
+.vscode/
+
+# Visual Studio
+.vs/
+
+# Logs
+*.log
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Entity Framework
+*.dbmdl
+
+# IIS Express
+iisexpress/
+
+# Publish output
+publish/
+
+# Environment files
+appsettings.Development.json
+
+# Secrets
+secrets.json
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# NuGet
+*.nupkg
+packages/
+
+# Test results
+TestResults/
+
+# Coverage
+coverage/
+*.coverage
+*.coveragexml
+
+# Node modules (if frontend inside same repo)
+node_modules/
+
+# Generated files
+Generated/
+
+# Temporary files
+tmp/
+temp/
+
+# JetBrains Rider
+*.sln.iml
